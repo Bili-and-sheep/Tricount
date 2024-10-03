@@ -18,7 +18,7 @@ public class User {
     }
 
     public String getFullName() {
-        return this.id + " " + this.firstName + " " + this.lastName + " " + this.tel + " " + this.password + " "
-                + this.roles;
+        return this.id + " " + this.firstName + " " + this.lastName + " " + this.firstName + "." + this.lastName
+                + "@tricount.com" + " " + this.tel + " " + this.password + " " + this.roles;
     }
 }
