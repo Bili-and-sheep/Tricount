@@ -3,30 +3,49 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:background="@android:color/white"
-    android:layout_marginBottom="8dp">
+    android:layout_margin="15dp"
+    android:gravity="center">
 
-    <TextView
-        android:id="@+id/tricountName"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:padding="10dp"
+        android:background="@drawable/input_rounded_10"
+        android:orientation="horizontal"
+        android:gravity="center">
 
-    <TextView
-        android:id="@+id/tricountType"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16sp" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
 
-    <Button
-        android:id="@+id/detailsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=">"
-        android:backgroundTint="@color/black"
-        android:textColor="@android:color/white"
-        android:layout_marginTop="8dp" />
+            <TextView
+                android:id="@+id/tricountName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/tricountType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/detailsButton"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text=">"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
 
 </LinearLayout>

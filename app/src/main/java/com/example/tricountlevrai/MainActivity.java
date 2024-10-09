@@ -13,8 +13,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private RecyclerView tricountRecyclerView;
-    private TricountAdapter tricountAdapter;
     private ArrayList<Tricount> tricountList;
 
     @Override
@@ -22,13 +20,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tricountRecyclerView = findViewById(R.id.tricountRecyclerView);
+        RecyclerView tricountRecyclerView = findViewById(R.id.tricountRecyclerView);
         tricountRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         tricountList = new ArrayList<>();
         loadTricounts(); // Charge les Tricounts
 
-        tricountAdapter = new TricountAdapter(tricountList, new TricountAdapter.OnItemClickListener() {
+        // Passer l'objet Tricount à l'activité des détails
+        TricountAdapter tricountAdapter = new TricountAdapter(tricountList, new TricountAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(Tricount tricount) {
                 Intent intent = new Intent(MainActivity.this, DetailsTricountActivity.class);

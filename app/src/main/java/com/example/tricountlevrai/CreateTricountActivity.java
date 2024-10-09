@@ -1,12 +1,17 @@
 package com.example.tricountlevrai;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class CreateTricountActivity extends AppCompatActivity {
     private EditText editTextName;
@@ -23,6 +28,8 @@ public class CreateTricountActivity extends AppCompatActivity {
         editTextParticipants = findViewById(R.id.tricountParticipants);
         Button buttonCreate = findViewById(R.id.createButton);
 
+
+        // Action du bouton de création
         buttonCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,11 +42,10 @@ public class CreateTricountActivity extends AppCompatActivity {
                     return;
                 }
 
-                // Créez un nouveau Tricount
-                Tricount newTricount = new Tricount(0, tricountName, "date_now", tricountType); // Créez votre instance avec les valeurs appropriées
-                // Ajoutez la logique pour enregistrer ce Tricount dans votre liste ou autre
+                // Création du nouvel objet Tricount
+                Tricount newTricount = new Tricount(0, tricountName, "date_now", tricountType);
                 Toast.makeText(CreateTricountActivity.this, "Tricount créé avec succès", Toast.LENGTH_SHORT).show();
-                finish(); // Retour à l'activité précédente
+                finish(); // Fermer l'activité après création
             }
         });
     }

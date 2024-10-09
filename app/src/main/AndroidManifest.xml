@@ -21,6 +21,35 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CreateTricountActivity"
+            android:label="Create Tricount"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:exported="true" />
+        <activity android:name=".DetailsTricountActivity"
+            android:label="Details Tricount"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:exported="true" />
+        <activity android:name=".ProfileActivity"
+            android:label="Profile"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:exported="true" />
+        <activity android:name=".CBActivity"
+            android:label="CB"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:exported="true" />
+        <activity android:name=".EditTricountActivity"
+            android:label="Edit Tricount"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:exported="true" />
+        <activity android:name=".LoginActivity"
+            android:label="Login"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:exported="true" />
+        <activity android:name=".RegisterActivity"
+            android:label="Register"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:exported="true" />
+
     </application>
 
 </manifest>
