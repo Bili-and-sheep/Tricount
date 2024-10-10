@@ -84,13 +84,6 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottomAppBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        app:backgroundTint="#1E1E1E" />
-
     <ImageView
         android:id="@+id/ImageViewIconTricount"
         android:layout_width="43dp"

@@ -97,7 +97,6 @@ public class CreateTricountActivity extends AppCompatActivity {
             }
         });
 
-        //Bouton pour retourner à l'activité précédente
         ImageButton imageButton = findViewById(R.id.imageButton);
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override

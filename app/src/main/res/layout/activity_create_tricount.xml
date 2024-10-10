@@ -6,24 +6,8 @@
     android:id="@+id/createTricountActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#1E1E1E"
-    tools:context=".CreateTricountActivity"
-    android:background="#1E1E1E">
-
-
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottomAppBar"
-        android:layout_width="412dp"
-        android:layout_height="71dp"
-        android:layout_gravity="bottom"
-        app:backgroundTint="#1E1E1E"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="BottomAppBar" />
+    android:background="#1E1E1E"
+    tools:context=".CreateTricountActivity">
 
     <ImageView
         android:id="@+id/ImageViewIconTricount"
@@ -106,11 +90,11 @@
         android:padding="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.081"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.052"
-    app:srcCompat="@drawable/scr_20241009_hvvq_removebg_preview" />
+        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.052"
+        app:srcCompat="@drawable/scr_20241009_hvvq_removebg_preview" />
 
     <TextView
         android:id="@+id/textView2"
@@ -172,7 +156,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditTextChoixType"
+        android:id="@+id/tricountType"
         android:layout_width="305dp"
         android:layout_height="45dp"
         android:layout_marginTop="340dp"

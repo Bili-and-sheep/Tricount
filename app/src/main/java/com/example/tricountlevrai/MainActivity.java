@@ -15,6 +15,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TRICOUNT_KEY = "tricount";
     private ArrayList<Tricount> tricountList;
     private ImageView imageViewTricount, imageViewCreditCard, imageViewProfile;
     private TextView textViewTricount, textViewCreditCard, textViewProfile;
@@ -24,25 +25,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Initialisation du RecyclerView et des données
+        // Initialize RecyclerView and data
         RecyclerView tricountRecyclerView = findViewById(R.id.tricountRecyclerView);
         tricountRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         tricountList = new ArrayList<>();
-        loadTricounts(); // Charge les Tricounts
+        loadTricounts(); // Load Tricounts
 
-        // Passer l'objet Tricount à l'activité des détails
+        // Set the adapter for RecyclerView
         TricountAdapter tricountAdapter = new TricountAdapter(tricountList, new TricountAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(Tricount tricount) {
                 Intent intent = new Intent(MainActivity.this, DetailsTricountActivity.class);
-                intent.putExtra("tricount", tricount); // Passer l'objet Tricount à l'activité des détails
+                intent.putExtra(TRICOUNT_KEY, tricount); // Pass the Tricount object to details activity
                 startActivity(intent);
             }
         });
 
         tricountRecyclerView.setAdapter(tricountAdapter);
 
+        // Initialize button for creating a new Tricount
         Button createTricountButton = findViewById(R.id.createTricountButton);
         createTricountButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Lier les ImageView et TextView à leur ID respectif
+        // Link ImageView and TextView to their respective IDs
         imageViewTricount = findViewById(R.id.ImageViewIconTricount);
         imageViewCreditCard = findViewById(R.id.ImageViewIconCreditCard);
         imageViewProfile = findViewById(R.id.ImageViewIconProfile);
@@ -61,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         textViewCreditCard = findViewById(R.id.ImageViewTextCreditCard);
         textViewProfile = findViewById(R.id.ImageViewTextProfile);
 
-        // Assigner des listeners de clic pour les icônes
+        // Assign click listeners for icons
         imageViewTricount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Assigner des listeners de clic pour les textes
+        // Assign click listeners for text views
         textViewTricount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -106,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    // Méthodes pour ouvrir différentes activités
+    // Methods to open different activities
     private void openTricountActivity() {
         Intent intent = new Intent(this, Tricount.class);
         startActivity(intent);
@@ -122,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    // Charger les Tricounts (ici exemple statique)
+    // Load Tricounts (example static data)
     private void loadTricounts() {
         tricountList.add(new Tricount("Tricount 1", "Type A"));
         tricountList.add(new Tricount("Tricount 2", "Type B"));

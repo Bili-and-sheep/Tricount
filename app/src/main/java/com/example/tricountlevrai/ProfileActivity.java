@@ -45,7 +45,7 @@ public class ProfileActivity extends AppCompatActivity {
                 saveUserProfile();
             }
         });
-        
+
 
         imageViewTricount.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,8 +91,8 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     private void loadUserProfile() {
-        usernameEditText.setText("Jean Dupont");
-        emailEditText.setText("jean.dupont@example.com");
+        usernameEditText.setText("David Tissot");
+        emailEditText.setText("david.tissot@example.com");
         phoneEditText.setText("0123456789");
     }
 
