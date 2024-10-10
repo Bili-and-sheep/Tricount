@@ -10,17 +10,20 @@
     tools:context=".CreateTricountActivity"
     android:background="#1E1E1E">
 
-    <ImageView
-        android:id="@+id/imageView4"
+
+    <ImageButton
+        android:id="@+id/imageButton"
         android:layout_width="31dp"
         android:layout_height="25dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.081"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.052"
-        app:srcCompat="@drawable/scr_20241009_hvvq_removebg_preview" />
+    app:layout_constraintHorizontal_bias="0.081"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.052"
+    app:srcCompat="@drawable/scr_20241009_hvvq_removebg_preview" />
 
     <TextView
         android:id="@+id/textView2"

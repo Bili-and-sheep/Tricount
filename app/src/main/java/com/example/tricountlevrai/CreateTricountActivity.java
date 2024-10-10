@@ -6,6 +6,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -42,11 +43,20 @@ public class CreateTricountActivity extends AppCompatActivity {
                     return;
                 }
 
-                // Création du nouvel objet Tricount
                 Tricount newTricount = new Tricount(0, tricountName, "date_now", tricountType);
                 Toast.makeText(CreateTricountActivity.this, "Tricount créé avec succès", Toast.LENGTH_SHORT).show();
-                finish(); // Fermer l'activité après création
+                finish();
             }
         });
+
+        //Bouton pour retourner à l'activité précédente
+        ImageButton imageButton = findViewById(R.id.imageButton);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
     }
 }

@@ -25,10 +25,9 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Vérification des informations de connexion
-                // ...
+                String email = emailEditText.getText().toString();
+                String password = passwordEditText.getText().toString();
 
-                // Rediriger vers MainActivity si connexion réussie
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
             }

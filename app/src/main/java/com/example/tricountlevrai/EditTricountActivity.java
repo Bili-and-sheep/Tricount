@@ -1,5 +1,6 @@
 package com.example.tricountlevrai;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,7 +24,6 @@ public class EditTricountActivity extends AppCompatActivity {
         tricountTypeEditText = findViewById(R.id.tricountType);
         saveButton = findViewById(R.id.saveButton);
 
-        // Récupérer l'objet Tricount à partir de l'Intent
         tricount = (Tricount) getIntent().getSerializableExtra("tricount");
 
         tricountNameEditText.setText(tricount.getName());
@@ -35,10 +35,9 @@ public class EditTricountActivity extends AppCompatActivity {
                 tricount.setName(tricountNameEditText.getText().toString());
                 tricount.setType(tricountTypeEditText.getText().toString());
 
-                // Sauvegarder les modifications
-                // Ajoutez la logique pour enregistrer ces modifications dans votre liste ou autre
-                // Fermer l'activité après la sauvegarde
                 Toast.makeText(EditTricountActivity.this, "Modifications enregistrées", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(EditTricountActivity.this, MainActivity.class);
+                startActivity(intent);
                 finish();
             }
         });

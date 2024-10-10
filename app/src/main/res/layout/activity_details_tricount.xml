@@ -9,7 +9,6 @@
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="40dp">
 
-    <!-- Nom du Tricount -->
     <TextView
         android:id="@+id/tricountNameTextView"
         android:layout_width="0dp"
@@ -25,7 +24,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Type du Tricount (ex. : voyage, coloc) -->
     <TextView
         android:id="@+id/tricountTypeTextView"
         android:layout_width="0dp"
@@ -55,17 +53,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tricountTypeTextView" />
 
-    <!-- RecyclerView pour afficher la liste des participants -->
-
-    <!-- Bouton pour éditer le Tricount -->
-
-    <!-- Bouton pour supprimer le Tricount -->
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/participantRecyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:padding="16dp"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -73,9 +66,8 @@
         app:layout_constraintTop_toBottomOf="@+id/tricountDateTextView"
         app:layout_constraintVertical_bias="0.0" />
 
-    <!-- Bouton pour ajouter un participant -->
     <Button
-        android:id="@+id/deleteButton"
+        android:id="@+id/deleteTricountButton"
         android:layout_width="305dp"
         android:layout_height="40dp"
         android:layout_marginTop="8dp"
@@ -85,10 +77,10 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editButton" />
+        app:layout_constraintTop_toBottomOf="@id/editTricountButton" />
 
     <Button
-        android:id="@+id/editButton"
+        android:id="@+id/editTricountButton"
         android:layout_width="305dp"
         android:layout_height="40dp"
         android:layout_marginTop="392dp"

@@ -27,14 +27,12 @@ public class RegisterActivity extends AppCompatActivity {
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Enregistrement du nouvel utilisateur
                 String name = nameEditText.getText().toString();
                 String email = emailEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
 
                 User newUser = new User(0, name, "", email, "", password, null);
 
-                // Redirection vers la page de connexion
                 Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                 startActivity(intent);
             }

@@ -13,6 +13,9 @@
         android:theme="@style/Theme.TricountLeVrai"
         tools:targetApi="31">
         <activity
+            android:name=".AddParticipantActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -21,35 +24,41 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CreateTricountActivity"
+        <activity
+            android:name=".CreateTricountActivity"
+            android:exported="true"
             android:label="Create Tricount"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:exported="true" />
-        <activity android:name=".DetailsTricountActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".DetailsTricountActivity"
+            android:exported="true"
             android:label="Details Tricount"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:exported="true" />
-        <activity android:name=".ProfileActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="true"
             android:label="Profile"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:exported="true" />
-        <activity android:name=".CBActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".CBActivity"
+            android:exported="true"
             android:label="CB"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:exported="true" />
-        <activity android:name=".EditTricountActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".EditTricountActivity"
+            android:exported="true"
             android:label="Edit Tricount"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:exported="true" />
-        <activity android:name=".LoginActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
             android:label="Login"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:exported="true" />
-        <activity android:name=".RegisterActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="true"
             android:label="Register"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:exported="true" />
-
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 
 </manifest>
