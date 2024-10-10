@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:background="#1E1E1E">
+    android:background="#1E1E1E"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="40dp">
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="412dp"
+        android:layout_height="71dp"
+        android:layout_gravity="bottom"
+        app:backgroundTint="#1E1E1E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="BottomAppBar" />
 
     <ImageView
         android:id="@+id/ImageViewIconTricount"
@@ -14,10 +29,11 @@
         android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.144"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.95"
-        app:srcCompat="@drawable/scr_20241003_ncng_3tpek3cqu_transformed_2_photoroom"/>
+        app:srcCompat="@drawable/scr_20241003_ncng_3tpek3cqu_transformed_2_photoroom" />
 
     <TextView
         android:id="@+id/ImageViewTextTricount"
@@ -27,9 +43,10 @@
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.127"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.977"/>
+        app:layout_constraintVertical_bias="0.977" />
 
     <TextView
         android:id="@+id/ImageViewTextCreditCard"
@@ -41,7 +58,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.977"/>
+        app:layout_constraintVertical_bias="0.977" />
 
     <ImageView
         android:id="@+id/ImageViewIconProfile"
@@ -49,10 +66,11 @@
         android:layout_height="27dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.852"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.95"
-        app:srcCompat="@drawable/scr_20241003_klow_removebg_preview"/>
+        app:srcCompat="@drawable/scr_20241003_klow_removebg_preview" />
 
     <TextView
         android:id="@+id/ImageViewTextProfile"
@@ -62,9 +80,10 @@
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.849"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.977"/>
+        app:layout_constraintVertical_bias="0.977" />
 
     <ImageView
         android:id="@+id/ImageViewIconCreditCard"
@@ -75,7 +94,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.95"
-        app:srcCompat="@drawable/scr_20241003_njov_photoroom"/>
+        app:srcCompat="@drawable/scr_20241003_njov_photoroom" />
 
     <TextView
         android:id="@+id/tricountNameTextView"
@@ -88,8 +107,9 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tricountTypeTextView"
@@ -101,8 +121,9 @@
         android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tricountNameTextView"/>
+        app:layout_constraintTop_toBottomOf="@id/tricountNameTextView" />
 
     <!-- Date du Tricount -->
     <TextView
@@ -115,8 +136,9 @@
         android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tricountTypeTextView"/>
+        app:layout_constraintTop_toBottomOf="@id/tricountTypeTextView" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/participantRecyclerView"
@@ -126,8 +148,10 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tricountDateTextView"/>
+        app:layout_constraintTop_toBottomOf="@+id/tricountDateTextView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/deleteTricountButton"
@@ -140,20 +164,20 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTricountButton"/>
+        app:layout_constraintTop_toBottomOf="@id/editTricountButton" />
 
     <Button
         android:id="@+id/editTricountButton"
         android:layout_width="305dp"
         android:layout_height="40dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="392dp"
         android:background="@drawable/input_rounded_10"
         android:text="Éditer"
         android:textAllCaps="false"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tricountDateTextView"/>
+        app:layout_constraintTop_toBottomOf="@id/tricountDateTextView" />
 
     <Button
         android:id="@+id/addParticipantButton"
@@ -163,6 +187,7 @@
         android:text="Ajouter un participant"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/participantRecyclerView"/>
+        app:layout_constraintTop_toBottomOf="@id/participantRecyclerView" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
