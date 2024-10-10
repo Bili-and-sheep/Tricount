@@ -56,6 +56,11 @@
         app:layout_constraintTop_toBottomOf="@id/tricountTypeTextView" />
 
     <!-- RecyclerView pour afficher la liste des participants -->
+
+    <!-- Bouton pour éditer le Tricount -->
+
+    <!-- Bouton pour supprimer le Tricount -->
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/participantRecyclerView"
         android:layout_width="0dp"
@@ -63,42 +68,38 @@
         android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/deleteButton"
+        app:layout_constraintTop_toBottomOf="@+id/tricountDateTextView"
         app:layout_constraintVertical_bias="0.0" />
 
-    <!-- Bouton pour éditer le Tricount -->
-
-    <!-- Bouton pour supprimer le Tricount -->
-    <Button
-        android:id="@+id/editButton"
-        android:layout_width="305dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="44dp"
-        android:background="@drawable/input_rounded_10"
-        android:text="Éditer"
-        android:textColor="@color/white"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tricountDateTextView" />
-
+    <!-- Bouton pour ajouter un participant -->
     <Button
         android:id="@+id/deleteButton"
         android:layout_width="305dp"
         android:layout_height="40dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/input_rounded_10"
         android:text="Supprimer"
-        android:textColor="@color/white"
         android:textAllCaps="false"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editButton" />
 
-    <!-- Bouton pour ajouter un participant -->
+    <Button
+        android:id="@+id/editButton"
+        android:layout_width="305dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="392dp"
+        android:background="@drawable/input_rounded_10"
+        android:text="Éditer"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tricountDateTextView" />
+
     <Button
         android:id="@+id/addParticipantButton"
         android:layout_width="wrap_content"
