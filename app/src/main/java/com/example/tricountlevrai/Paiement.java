@@ -17,5 +17,4 @@ public class Paiement {
         this.enseigne = enseigne;
     }
 
-    // Getters et Setters
 }

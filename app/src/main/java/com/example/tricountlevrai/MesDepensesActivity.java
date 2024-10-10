@@ -29,16 +29,14 @@ public class MesDepensesActivity extends AppCompatActivity {
 
         // Initialiser la liste des dépenses
         depenseList = new ArrayList<>();
-        // Exemple de données (vous pouvez remplacer cela par vos données réelles)
+
         depenseList.add(new Depense("Repas cérémonies", 3935));
         depenseList.add(new Depense("J'ai pas d'idée", -936));
 
-        // Configurer RecyclerView
         depenseAdapter = new DepenseAdapter(depenseList);
         recyclerViewMesDepenses.setLayoutManager(new LinearLayoutManager(this));
         recyclerViewMesDepenses.setAdapter(depenseAdapter);
 
-        // Gestion du bouton d'ajout de dépense
         buttonAjouterDepense.setOnClickListener(v -> {
             Toast.makeText(MesDepensesActivity.this, "Ajouter une dépense", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(MesDepensesActivity.this, AddDepenseActivity.class);

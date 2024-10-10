@@ -32,14 +32,12 @@ public class DepenseActivity extends AppCompatActivity {
         textViewCreditCard = findViewById(R.id.ImageViewTextCreditCard);
         textViewProfile = findViewById(R.id.ImageViewTextProfile);
 
-        // Gestion des insets du système (barres de statut, de navigation, etc.)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        // Gestion des clics sur les icônes
         imageViewTricount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,20 +81,17 @@ public class DepenseActivity extends AppCompatActivity {
             }
         });
 
-        // Ajout des boutons "Mes Dépenses" et "Dépenses Groupes"
         Button mesDepensesButton = findViewById(R.id.buttonMesDepenses);
         Button depensesGroupesButton = findViewById(R.id.buttonDepensesGroupes);
 
-        // Redirige vers l'activité "Mes Dépenses"
         mesDepensesButton.setOnClickListener(v -> {
             Intent intent = new Intent(DepenseActivity.this, MesDepensesActivity.class);
             startActivity(intent);
         });
 
-        // Redirige vers l'activité "Dépenses Groupes"
         depensesGroupesButton.setOnClickListener(v -> {
-            // Si cette activité est déjà affichée pour les dépenses de groupe, il n'y a peut-être rien à faire
-            // Sinon, si besoin d'actualiser ou rediriger, vous pouvez ajouter ici du code
+            Intent intent = new Intent(DepenseActivity.this, DepenseActivity.class);
+            startActivity(intent);
         });
     }
 

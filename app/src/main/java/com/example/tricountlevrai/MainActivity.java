@@ -25,14 +25,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Initialize RecyclerView and data
         RecyclerView tricountRecyclerView = findViewById(R.id.tricountRecyclerView);
         tricountRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         tricountList = new ArrayList<>();
         loadTricounts(); // Load Tricounts
 
-        // Set the adapter for RecyclerView
         TricountAdapter tricountAdapter = new TricountAdapter(tricountList, new TricountAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(Tricount tricount) {
@@ -44,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
 
         tricountRecyclerView.setAdapter(tricountAdapter);
 
-        // Initialize button for creating a new Tricount
         Button createTricountButton = findViewById(R.id.createTricountButton);
         createTricountButton.setOnClickListener(new View.OnClickListener() {
             @Override

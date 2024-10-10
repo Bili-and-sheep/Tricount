@@ -17,7 +17,6 @@ public class DepenseAdapter extends RecyclerView.Adapter<DepenseAdapter.DepenseV
     private List<Depense> depenseList;
 
     public DepenseAdapter(List<Depense> depenseList) {
-        // Vérification pour s'assurer que la liste n'est pas nulle
         if (depenseList == null) {
             throw new IllegalArgumentException("La liste des dépenses ne peut pas être nulle");
         }
@@ -27,7 +26,6 @@ public class DepenseAdapter extends RecyclerView.Adapter<DepenseAdapter.DepenseV
     @NonNull
     @Override
     public DepenseViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        // Gonfler le layout de l'élément de dépense
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_depense, parent, false);
         return new DepenseViewHolder(view);
     }
@@ -36,11 +34,9 @@ public class DepenseAdapter extends RecyclerView.Adapter<DepenseAdapter.DepenseV
     public void onBindViewHolder(@NonNull DepenseViewHolder holder, int position) {
         Depense depense = depenseList.get(position);
 
-        // Assigner les valeurs des dépenses aux TextViews
         holder.libelleTextView.setText(depense.getLibelle());
         holder.montantTextView.setText(String.format(Locale.getDefault(), "%.2f €", depense.getMontantDepense()));
 
-        // Formatage de la date
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
         holder.dateTextView.setText(dateFormat.format(depense.getDate()));
     }
