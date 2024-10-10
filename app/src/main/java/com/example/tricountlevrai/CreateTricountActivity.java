@@ -12,12 +12,17 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+
 public class CreateTricountActivity extends AppCompatActivity {
     private EditText editTextName;
     private EditText editTextType;
     private EditText editTextParticipants;
     private ImageView imageViewTricount, imageViewCreditCard, imageViewProfile;
     private TextView textViewTricount, textViewCreditCard, textViewProfile;
+
+    // List to hold Tricount objects
+    public static ArrayList<Tricount> tricountList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,18 +45,28 @@ public class CreateTricountActivity extends AppCompatActivity {
         buttonCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String tricountName = editTextName.getText().toString();
-                String tricountType = editTextType.getText().toString();
-                String tricountParticipants = editTextParticipants.getText().toString();
+                String tricountName = editTextName.getText().toString().trim();
+                String tricountType = editTextType.getText().toString().trim();
+                String tricountParticipants = editTextParticipants.getText().toString().trim();
 
-                if (tricountName.isEmpty() || tricountType.isEmpty()) {
+                // Validate inputs
+                if (tricountName.isEmpty() || tricountType.isEmpty() || tricountParticipants.isEmpty()) {
                     Toast.makeText(CreateTricountActivity.this, "Veuillez remplir tous les champs", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
+                // Create a new Tricount object
                 Tricount newTricount = new Tricount(0, tricountName, "date_now", tricountType);
+                // Add the new Tricount to the list
+                tricountList.add(newTricount);
+
+                // Show success message
                 Toast.makeText(CreateTricountActivity.this, "Tricount créé avec succès", Toast.LENGTH_SHORT).show();
-                finish();
+
+                // Redirect to Tricounts list activity
+                Intent intent = new Intent(CreateTricountActivity.this, TricountAdapter.class); // Ensure this class exists
+                startActivity(intent);
+                finish(); // Finish the current activity
             }
         });
 

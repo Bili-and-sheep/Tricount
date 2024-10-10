@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Load Tricounts (example static data)
     private void loadTricounts() {
-        tricountList.add(new Tricount("Tricount 1", "Type A"));
+        tricountList.add(new Tricount("Tricount Mariage", "Fête"));
         tricountList.add(new Tricount("Tricount 2", "Type B"));
     }
 }

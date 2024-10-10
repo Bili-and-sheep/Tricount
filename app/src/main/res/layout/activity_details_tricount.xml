@@ -14,10 +14,11 @@
         android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.144"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.95"
-        app:srcCompat="@drawable/scr_20241003_ncng_3tpek3cqu_transformed_2_photoroom"/>
+        app:srcCompat="@drawable/scr_20241003_ncng_3tpek3cqu_transformed_2_photoroom" />
 
     <TextView
         android:id="@+id/ImageViewTextTricount"
@@ -27,9 +28,10 @@
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.127"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.977"/>
+        app:layout_constraintVertical_bias="0.977" />
 
     <TextView
         android:id="@+id/ImageViewTextCreditCard"
@@ -41,7 +43,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.977"/>
+        app:layout_constraintVertical_bias="0.977" />
 
     <ImageView
         android:id="@+id/ImageViewIconProfile"
@@ -49,10 +51,11 @@
         android:layout_height="27dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.852"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.95"
-        app:srcCompat="@drawable/scr_20241003_klow_removebg_preview"/>
+        app:srcCompat="@drawable/scr_20241003_klow_removebg_preview" />
 
     <TextView
         android:id="@+id/ImageViewTextProfile"
@@ -62,9 +65,10 @@
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.849"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.977"/>
+        app:layout_constraintVertical_bias="0.977" />
 
     <ImageView
         android:id="@+id/ImageViewIconCreditCard"
@@ -75,7 +79,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.95"
-        app:srcCompat="@drawable/scr_20241003_njov_photoroom"/>
+        app:srcCompat="@drawable/scr_20241003_njov_photoroom" />
 
     <TextView
         android:id="@+id/tricountNameTextView"
