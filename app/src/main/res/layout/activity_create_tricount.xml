@@ -6,6 +6,7 @@
     android:id="@+id/createTricountActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#1E1E1E"
     tools:context=".CreateTricountActivity"
     android:background="#1E1E1E">
 
@@ -22,19 +23,6 @@
         app:srcCompat="@drawable/scr_20241009_hvvq_removebg_preview" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tricounts"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.176"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.054" />
-
-    <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,7 +33,7 @@
         app:layout_constraintHorizontal_bias="0.176"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.054" />
+        app:layout_constraintVertical_bias="0.055" />
 
     <TextView
         android:id="@+id/TextViewTitle"
@@ -83,7 +71,7 @@
         android:id="@+id/TextViewChoixTitre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="224dp"
         android:text="Titre"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
@@ -115,7 +103,7 @@
         android:id="@+id/TextViewChoixType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="304dp"
+        android:layout_marginTop="308dp"
         android:text="Type"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
@@ -147,13 +135,13 @@
         android:id="@+id/TextViewChoixParticipants"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="396dp"
+        android:layout_marginTop="400dp"
         android:text="Participants"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.163"
+        app:layout_constraintHorizontal_bias="0.178"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -166,8 +154,9 @@
         android:gravity="center"
         android:text="Créer"
         android:textAlignment="center"
+        android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:textSize="18sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
