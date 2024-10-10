@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="Ajouter une Carte Bancaire"
         android:textSize="24sp"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
