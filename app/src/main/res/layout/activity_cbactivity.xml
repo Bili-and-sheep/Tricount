@@ -1,94 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:background="#1E1E1E">
 
-    <!-- Titre de la page -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
 
-    <!-- Numéro de carte bancaire -->
+        <TextView
+            android:id="@+id/cbTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="124dp"
+            android:text="Ajouter une Carte Bancaire"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- CCV -->
+        <EditText
+            android:id="@+id/numero_card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/input_rounded_10"
+            android:hint="Numéro de carte (16 chiffres)"
+            android:inputType="number"
+            android:maxLength="16"
+            android:padding="12dp"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cbTitle" />
 
-    <!-- Date d'expiration -->
+        <EditText
+            android:id="@+id/ccv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/input_rounded_10"
+            android:hint="CCV (3 chiffres)"
+            android:inputType="numberPassword"
+            android:maxLength="3"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/numero_card" />
 
-    <!-- Bouton de sauvegarde -->
+        <EditText
+            android:id="@+id/date_expi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/input_rounded_10"
+            android:hint="Date d'expiration (MM/AA)"
+            android:inputType="date"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ccv" />
 
-    <Button
-        android:id="@+id/saveButton"
-        android:layout_width="0dp"
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:background="@drawable/input_rounded_10"
+            android:backgroundTint="@color/black"
+            android:text="Sauvegarder"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/date_expi" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:background="@drawable/input_rounded_10"
-        android:backgroundTint="@color/black"
-        android:text="Sauvegarder"
-        android:textAllCaps="false"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/date_expi" />
+        android:layout_gravity="bottom"
+        app:backgroundTint="#1E1E1E" />
+
+    <ImageView
+        android:id="@+id/ImageViewIconTricount"
+        android:layout_width="43dp"
+        android:layout_height="30dp"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        app:srcCompat="@drawable/scr_20241003_ncng_3tpek3cqu_transformed_2_photoroom" />
 
     <TextView
-        android:id="@+id/cbTitle"
+        android:id="@+id/ImageViewTextTricount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
-        android:text="Ajouter une Carte Bancaire"
-        android:textColor="@android:color/white"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="42dp"
+        android:text="Tricounts"
+        android:textColor="#FFFFFF" />
 
-    <EditText
-        android:id="@+id/date_expi"
-        android:layout_width="0dp"
+    <ImageView
+        android:id="@+id/ImageViewIconCreditCard"
+        android:layout_width="33dp"
+        android:layout_height="27dp"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="136dp"
+        android:layout_marginBottom="16dp"
+        app:srcCompat="@drawable/scr_20241003_njov_photoroom" />
+
+    <TextView
+        android:id="@+id/ImageViewTextCreditCard"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/input_rounded_10"
-        android:hint="Date d'expiration (MM/AA)"
-        android:inputType="date"
-        android:padding="12dp"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ccv" />
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="42dp"
+        android:text="Carte de crédit"
+        android:textColor="#FFFFFF" />
 
-    <EditText
-        android:id="@+id/ccv"
-        android:layout_width="0dp"
+    <ImageView
+        android:id="@+id/ImageViewIconProfile"
+        android:layout_width="35dp"
+        android:layout_height="27dp"
+        android:layout_gravity="start|bottom"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="16dp"
+        app:srcCompat="@drawable/scr_20241003_klow_removebg_preview" />
+
+    <TextView
+        android:id="@+id/ImageViewTextProfile"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/input_rounded_10"
-        android:hint="CCV (3 chiffres)"
-        android:inputType="numberPassword"
-        android:maxLength="3"
-        android:padding="12dp"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/numero_card" />
+        android:layout_gravity="start|bottom"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="42dp"
+        android:text="Profil"
+        android:textColor="#FFFFFF" />
 
-    <EditText
-        android:id="@+id/numero_card"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/input_rounded_10"
-        android:hint="Numéro de carte (16 chiffres)"
-        android:inputType="number"
-        android:maxLength="16"
-        android:padding="12dp"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cbTitle" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

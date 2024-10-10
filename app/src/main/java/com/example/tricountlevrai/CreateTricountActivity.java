@@ -2,22 +2,22 @@ package com.example.tricountlevrai;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class CreateTricountActivity extends AppCompatActivity {
     private EditText editTextName;
     private EditText editTextType;
     private EditText editTextParticipants;
+    private ImageView imageViewTricount, imageViewCreditCard, imageViewProfile;
+    private TextView textViewTricount, textViewCreditCard, textViewProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +29,14 @@ public class CreateTricountActivity extends AppCompatActivity {
         editTextParticipants = findViewById(R.id.tricountParticipants);
         Button buttonCreate = findViewById(R.id.createButton);
 
+        imageViewTricount = findViewById(R.id.ImageViewIconTricount);
+        imageViewCreditCard = findViewById(R.id.ImageViewIconCreditCard);
+        imageViewProfile = findViewById(R.id.ImageViewIconProfile);
 
-        // Action du bouton de création
+        textViewTricount = findViewById(R.id.ImageViewTextTricount);
+        textViewCreditCard = findViewById(R.id.ImageViewTextCreditCard);
+        textViewProfile = findViewById(R.id.ImageViewTextProfile);
+
         buttonCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,6 +55,48 @@ public class CreateTricountActivity extends AppCompatActivity {
             }
         });
 
+        imageViewTricount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openTricountActivity();
+            }
+        });
+
+        imageViewCreditCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openCreditCardActivity();
+            }
+        });
+
+        imageViewProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openProfileActivity();
+            }
+        });
+
+        textViewTricount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openTricountActivity();
+            }
+        });
+
+        textViewCreditCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openCreditCardActivity();
+            }
+        });
+
+        textViewProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openProfileActivity();
+            }
+        });
+
         //Bouton pour retourner à l'activité précédente
         ImageButton imageButton = findViewById(R.id.imageButton);
         imageButton.setOnClickListener(new View.OnClickListener() {
@@ -57,6 +105,20 @@ public class CreateTricountActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
 
+    private void openTricountActivity() {
+        Intent intent = new Intent(CreateTricountActivity.this, Tricount.class);
+        startActivity(intent);
+    }
+
+    private void openCreditCardActivity() {
+        Intent intent = new Intent(CreateTricountActivity.this, CBActivity.class);
+        startActivity(intent);
+    }
+
+    private void openProfileActivity() {
+        Intent intent = new Intent(CreateTricountActivity.this, ProfileActivity.class);
+        startActivity(intent);
     }
 }
